@@ -3,4 +3,4 @@ Allow: /
 Disallow: /dziekujemy
 Disallow: /en/thank-you
 
-Sitemap: https://stalbruk.pages.dev/sitemap.xml
+Sitemap: https://alu3.pages.dev/sitemap.xml

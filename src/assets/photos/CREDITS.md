@@ -34,14 +34,14 @@ pair is supplied.
 photographs from different locations**, sourced only to match the site's
 grey/overcast tone and to have roughly comparable ground-level framing. They
 were picked to demo the before/after slider component, not to document any
-real StalBruk job.
+real ALU3 job.
 
 Presenting them side-by-side in a wipe slider implies one site photographed
 twice — that is not true here, and shipping this pair to production would be
 fabricated evidence of work, no different from an invented testimonial.
 
 **Before launch:** replace both files with a genuine before/after pair shot
-from the same fixed camera position at one real StalBruk site. Do not ship
+from the same fixed camera position at one real ALU3 site. Do not ship
 this demo pair to production.
 
 The rest of the earlier Unsplash stopgap set has been removed.

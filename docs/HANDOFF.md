@@ -1,4 +1,4 @@
-# Handoff — StalBruk landing page
+# Handoff — ALU3 landing page
 
 **Date:** 2026-08-14
 **Branch:** `main` is the trunk and the default branch; feature work branches off it.
@@ -35,7 +35,7 @@ Language hint bar removed; the header switch carries a globe icon.
 ## 2026-09-18 — ALU3 change request
 
 The page was rebuilt to `change-requests/alu3_mockup_v13-1.html`. The brand is now
-**ALU3** ("a brand of StalBruk Sp. z o.o."), and the offer is aluminium gates and fences,
+**ALU3** ("a brand of ALU3 Sp. z o.o."), and the offer is aluminium gates and fences,
 glass railings and glass canopies. Block paving and earthworks are gone.
 
 - _Structure:_ header → hero with a stats strip → services (snap row) → full-bleed

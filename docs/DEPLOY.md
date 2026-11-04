@@ -4,7 +4,7 @@ Everything here has been prepared but never run: no Cloudflare project exists ye
 lead delivery path has never worked end to end. Locally only two branches of it are proven —
 the honeypot (200, nothing sent) and validation (422 with per-field codes).
 
-`wrangler.toml` already names the project `stalbruk` and points at `dist`, so most commands
+`wrangler.toml` already names the project `ALU3` and points at `dist`, so most commands
 below take no arguments. The Function in `functions/api/lead.ts` ships with the static files
 automatically.
 
@@ -18,12 +18,12 @@ Direct upload. No dashboard, no Git connection, a live URL in about a minute.
 cd path/to/landing-2-go
 npm run build
 npx wrangler login
-npx wrangler pages project create stalbruk --production-branch=main
+npx wrangler pages project create ALU3 --production-branch=main
 npx wrangler pages deploy
 ```
 
 `wrangler login` opens a browser to authorise. The last command prints the project URL
-(`https://stalbruk.pages.dev`) and a per-deployment URL.
+(`https://alu3.pages.dev`) and a per-deployment URL.
 
 The form will fail at this point. That is expected — the Function has nowhere to send a lead
 until the secrets exist.
@@ -37,9 +37,9 @@ until the secrets exist.
 | `TELEGRAM_CHAT_ID`     | message the bot (or add it to the group and post there), then open `https://api.telegram.org/bot<TOKEN>/getUpdates` and read `chat.id`. A group id is negative — the minus sign is part of the value |
 
 ```bash
-npx wrangler pages secret put WEB3FORMS_ACCESS_KEY --project-name stalbruk
-npx wrangler pages secret put TELEGRAM_BOT_TOKEN --project-name stalbruk
-npx wrangler pages secret put TELEGRAM_CHAT_ID --project-name stalbruk
+npx wrangler pages secret put WEB3FORMS_ACCESS_KEY --project-name ALU3
+npx wrangler pages secret put TELEGRAM_BOT_TOKEN --project-name ALU3
+npx wrangler pages secret put TELEGRAM_CHAT_ID --project-name ALU3
 
 npx wrangler pages deploy
 ```
@@ -66,7 +66,7 @@ and logs the reason: Workers & Pages → project → Logs.
 
 ## 4. Automatic deploys from GitHub
 
-Workers & Pages → `stalbruk` → Settings → Builds & deployments → Connect to Git.
+Workers & Pages → `ALU3` → Settings → Builds & deployments → Connect to Git.
 
 | Setting           | Value                                                      |
 | ----------------- | ---------------------------------------------------------- |
@@ -86,7 +86,7 @@ and hreflang depend on it) and the `Sitemap:` line in `public/robots.txt`.
 2. Change the address in both files, rebuild, redeploy.
 3. Check `/sitemap.xml` and `<link rel="canonical">` on both locales.
 
-The name "StalBruk" still needs a domain and trademark check before launch — a risk recorded
+The name "ALU3" still needs a domain and trademark check before launch — a risk recorded
 in the original spec.
 
 ## 6. Analytics

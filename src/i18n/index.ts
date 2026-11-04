@@ -37,6 +37,6 @@ export function route(key: RouteKey, locale: Locale): string {
 }
 
 export function absoluteUrl(path: string, site: URL | undefined): string {
-  const origin = site?.origin ?? 'https://stalbruk.pages.dev';
+  const origin = site?.origin ?? 'https://alu3.pages.dev';
   return new URL(path, origin).toString();
 }

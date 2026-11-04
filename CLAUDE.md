@@ -1,11 +1,11 @@
-# landing-2-go — StalBruk landing page
+# landing-2-go — ALU3 landing page
 
-Lead-generation landing page for ALU3 (a brand of StalBruk), an aluminium gates, railings and glass canopies contractor in Gdańsk, Poland.
+Lead-generation landing page for ALU3 (a brand of ALU3), an aluminium gates, railings and glass canopies contractor in Gdańsk, Poland.
 
 ## Documents
 
 - [`info/SPEC.md`](info/SPEC.md) — original product specification
-- [`docs/superpowers/specs/2026-08-13-stalbruk-landing-design.md`](docs/superpowers/specs/2026-08-13-stalbruk-landing-design.md) — current design spec; supersedes parts of `info/SPEC.md`
+- [`docs/superpowers/specs/2026-08-13-ALU3-landing-design.md`](docs/superpowers/specs/2026-08-13-ALU3-landing-design.md) — current design spec; supersedes parts of `info/SPEC.md`
 - [`docs/content/`](docs/content/) — PL and EN copy drafts
 - [`docs/design/placeholders/`](docs/design/placeholders/) — image placeholders and photographer shot list
 

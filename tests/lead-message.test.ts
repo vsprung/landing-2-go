@@ -56,7 +56,7 @@ describe('attribution', () => {
         utmMedium: 'cpc',
         utmCampaign: 'bramy-gdansk',
         gclid: 'Cj0KCQ',
-        pageUrl: 'https://stalbruk.pl/?gclid=Cj0KCQ',
+        pageUrl: 'https://alu3.pl/?gclid=Cj0KCQ',
       },
     });
     expect(message).toContain('google / cpc / bramy-gdansk');
@@ -64,8 +64,8 @@ describe('attribution', () => {
   });
 
   it('falls back to the landing URL when only that is known', () => {
-    expect(describeAttribution({ pageUrl: 'https://stalbruk.pl/en/' })).toBe(
-      'https://stalbruk.pl/en/',
+    expect(describeAttribution({ pageUrl: 'https://alu3.pl/en/' })).toBe(
+      'https://alu3.pl/en/',
     );
   });
 

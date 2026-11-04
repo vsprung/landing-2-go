@@ -6,15 +6,15 @@
   },
 
   "seo": {
-    "title": "Aluminium Gates & Paving — Gdańsk and Pomerania | StalBruk",
+    "title": "Aluminium Gates & Paving — Gdańsk and Pomerania | ALU3",
     "description": "Laser-welded aluminium gates, fences and automation, manufactured and installed. Block paving, earthworks and turnkey projects with our own machinery. Free site survey and quote within 24 hours.",
-    "ogTitle": "StalBruk — aluminium gates and block paving in Pomerania",
+    "ogTitle": "ALU3 — aluminium gates and block paving in Pomerania",
     "ogDescription": "One crew, one deadline: laser-welded gates, paving and earthworks with our own equipment. Gdańsk, Gdynia, Sopot and the surrounding region.",
     "ogImageAlt": "Aluminium sliding gate and block-paved driveway in front of a family house"
   },
 
   "topbar": {
-    "brand": "StalBruk",
+    "brand": "ALU3",
     "location": "Gdańsk and region",
     "phoneLabel": "Call us",
     "phoneAria": "Call {{TELEFON}}",
@@ -340,7 +340,7 @@
   },
 
   "thankyou": {
-    "seoTitle": "Thank you for your enquiry | StalBruk",
+    "seoTitle": "Thank you for your enquiry | ALU3",
     "title": "Enquiry received",
     "lead": "We will call you back within 24 hours — or first thing the next morning if you sent it late in the evening.",
     "next": "In the meantime, take a look at our work or call us straight away on {{TELEFON}}.",
