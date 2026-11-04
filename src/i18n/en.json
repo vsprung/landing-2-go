@@ -16,7 +16,7 @@
   },
   "topbar": {
     "brand": "ALU3",
-    "phoneAria": "Call +48 510 318 834",
+    "phoneAria": "Call +48 603 722 745",
     "langSwitchTo": "Polski"
   },
   "hero": {
@@ -382,8 +382,8 @@
       "emailInvalid": "Check the email address — the @ sign or the domain is missing",
       "serviceRequired": "Choose a type of work from the list",
       "gdprRequired": "Without this consent we cannot process your enquiry",
-      "network": "We could not send your enquiry. Call +48 510 318 834 — we will pick up.",
-      "server": "Something went wrong on our side. Try again shortly or call +48 510 318 834."
+      "network": "We could not send your enquiry. Call +48 603 722 745 — we will pick up.",
+      "server": "Something went wrong on our side. Try again shortly or call +48 603 722 745."
     }
   },
   "contacts": {
@@ -397,15 +397,15 @@
   },
   "footer": {
     "company": "a brand of ALU3 Sp. z o.o.",
-    "address": "ul. Przemysłowa 12, 80-298 Gdańsk",
-    "nip": "VAT ID 000-000-00-00",
+    "address": "ul. Myśliwska 26C / 22, 80-126 Gdańsk",
+    "nip": "9571157231",
     "privacy": "Privacy policy"
   },
   "thankyou": {
     "seoTitle": "Thank you for your enquiry | ALU3",
     "title": "Enquiry received",
     "lead": "We will call you back within 24 hours — or first thing the next morning if you sent it late in the evening.",
-    "next": "In the meantime, take a look at our work or call us straight away on +48 510 318 834.",
+    "next": "In the meantime, take a look at our work or call us straight away on +48 603 722 745.",
     "backHome": "Back to the homepage",
     "callNow": "Call now"
   },

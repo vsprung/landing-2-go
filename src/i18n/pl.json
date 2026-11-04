@@ -16,7 +16,7 @@
   },
   "topbar": {
     "brand": "ALU3",
-    "phoneAria": "Zadzwoń pod numer +48 510 318 834",
+    "phoneAria": "Zadzwoń pod numer +48 603 722 745",
     "langSwitchTo": "English"
   },
   "hero": {
@@ -68,7 +68,7 @@
       },
       {
         "id": "balustrady",
-        "price": "od 6 000 zł",
+        "price": "od 1 500 zł",
         "title": "Balustrady szklane",
         "desc": "Szkło hartowane i VSG — balkony, tarasy, schody.",
         "list": [
@@ -238,7 +238,7 @@
       },
       {
         "q": "Ile kosztuje balustrada lub zadaszenie szklane?",
-        "a": "Balustrady szklane zaczynają się od 6 000 zł, zadaszenia od 2 500 zł — dokładna kwota zależy od metrażu, rodzaju szkła i sposobu mocowania. Podajemy ją po bezpłatnym pomiarze."
+        "a": "Balustrady szklane zaczynają się od 1 500 zł, zadaszenia od 2 500 zł — dokładna kwota zależy od metrażu, rodzaju szkła i sposobu mocowania. Podajemy ją po bezpłatnym pomiarze."
       },
       {
         "q": "Jak długo trwa realizacja?",
@@ -382,8 +382,8 @@
       "emailInvalid": "Sprawdź adres e-mail — brakuje znaku @ lub domeny",
       "serviceRequired": "Wybierz rodzaj usługi z listy",
       "gdprRequired": "Bez tej zgody nie możemy przetwarzać zgłoszenia",
-      "network": "Nie udało się wysłać zgłoszenia. Zadzwoń pod +48 510 318 834 — odbierzemy.",
-      "server": "Coś poszło nie tak po naszej stronie. Spróbuj ponownie za chwilę albo zadzwoń pod +48 510 318 834."
+      "network": "Nie udało się wysłać zgłoszenia. Zadzwoń pod +48 603 722 745 — odbierzemy.",
+      "server": "Coś poszło nie tak po naszej stronie. Spróbuj ponownie za chwilę albo zadzwoń pod +48 603 722 745."
     }
   },
   "contacts": {
@@ -397,15 +397,15 @@
   },
   "footer": {
     "company": "ALU3 Igor Kalinowski",
-    "address": "Gdańsk",
-    "nip": "",
-    "privacy": ""
+    "address": "ul. Myśliwska 26C / 22, 80-126 Gdańsk",
+    "nip": "9571157231",
+    "privacy": "Polityka prywatności"
   },
   "thankyou": {
     "seoTitle": "Dziękujemy za zgłoszenie | ALU3",
     "title": "Zgłoszenie przyjęte",
     "lead": "Oddzwonimy w ciągu 24 godzin, a jeśli wysłałeś je wieczorem — następnego dnia rano.",
-    "next": "W międzyczasie możesz obejrzeć nasze realizacje albo zadzwonić od razu pod +48 510 318 834.",
+    "next": "W międzyczasie możesz obejrzeć nasze realizacje albo zadzwonić od razu pod +48 603 722 745.",
     "backHome": "Wróć na stronę główną",
     "callNow": "Zadzwoń teraz"
   },

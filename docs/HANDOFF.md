@@ -58,7 +58,7 @@ glass railings and glass canopies. Block paving and earthworks are gone.
 - _Where this departs from the mockup, and why:_ accent text on dark bands uses a light
   tint, because the mockup's value fails contrast; form fields keep visible labels; the
   field underline is lighter so it clears 3:1. See `CLAUDE.md`.
-- _Unconfirmed values:_ the phone `+48 510 318 834`, the email `biuro@alu3.pl`, the
+- _Unconfirmed values:_ the phone `+48 603 722 745`, the email `biuro@alu3.pl`, the
   figures, the prices and the NIP are taken as the mockup shows them. `_meta.demo` stays
   `true`.
 
@@ -245,7 +245,7 @@ Axe cannot catch any of this — contrast over a photograph is not something it 
 
 ## Open item 3 — demo data must be replaced before launch
 
-`src/i18n/{pl,en}.json` carry values that have not been confirmed: the trust figures (12 years, 380 projects, 5-year warranty, 100% in-house production), the phone `+48 510 318 834`, the email `biuro@alu3.pl`, the company name and address, and the three service prices (from 12 000 zł, 6 000 zł and 2 500 zł). All of them come from the ALU3 mockup. The NIP is deliberately impossible (`000-000-00-00`), so it cannot collide with a real company.
+`src/i18n/{pl,en}.json` carry values that have not been confirmed: the trust figures (12 years, 380 projects, 5-year warranty, 100% in-house production), the phone `+48 603 722 745`, the email `biuro@alu3.pl`, the company name and address, and the three service prices (from 12 000 zł, 1 500 zł and 2 500 zł). All of them come from the ALU3 mockup. The NIP is deliberately impossible (`000-000-00-00`), so it cannot collide with a real company.
 
 `_meta.demo: true` marks this, and `tests/i18n.test.ts` fails while it is true. Replace the values, set the flag to `false`, and the suite goes green. Do not clear the flag while the values are still invented.
 
