@@ -68,7 +68,7 @@
       },
       {
         "id": "balustrady",
-        "price": "from PLN 6,000",
+        "price": "from PLN 1,500",
         "title": "Glass railings",
         "desc": "Toughened and laminated (VSG) glass — balconies, terraces, stairs.",
         "list": [
@@ -238,7 +238,7 @@
       },
       {
         "q": "How much does a glass railing or canopy cost?",
-        "a": "Glass railings start at PLN 6,000 and canopies at PLN 2,500 — the exact figure depends on the length, the type of glass and the fixing method. We give it after a free measurement."
+        "a": "Glass railings start at PLN 1,500 and canopies at PLN 2,500 — the exact figure depends on the length, the type of glass and the fixing method. We give it after a free measurement."
       },
       {
         "q": "How long does it take?",
@@ -398,7 +398,7 @@
   "footer": {
     "company": "a brand of ALU3 Sp. z o.o.",
     "address": "ul. Myśliwska 26C / 22, 80-126 Gdańsk",
-    "nip": "9571157231",
+    "nip": "NIP 9571157231",
     "privacy": "Privacy policy"
   },
   "thankyou": {
