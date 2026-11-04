@@ -49,7 +49,8 @@ glass railings and glass canopies. Block paving and earthworks are gone.
   the service cards, the sticky mobile bar, the PL/EN locales and the language hint.
 - _Before/after slider:_ `BeforeAfter.astro` ("Podjazd przed i po") was restored under the
   gallery at the client's request, with the original driveway copy and the old stock
-  pair, and it is always rendered. **Before launch:** replace `before-driveway.jpg` and
+  pair. It is currently **hidden** by `SHOW_BEFORE_AFTER = false` in `Gallery.astro`;
+  set the flag to `true` to show it again. **Before launch:** replace `before-driveway.jpg` and
   `after-driveway.jpg` with a genuine pair from one site, shot from the same position.
   The current pair is two unrelated photographs (see `CREDITS.md`).
 - _Service values_ (`src/lib/services.ts`) are now `brama-przesuwna`,

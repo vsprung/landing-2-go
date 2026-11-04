@@ -10,14 +10,23 @@ interface Props {
 
 const { locale } = Astro.props;
 const t = getDictionary(locale);
+
+// The before/after slider is hidden until a genuine pair from one site is
+// available (the current photos are two unrelated stock shots). The component,
+// its copy in src/i18n/ and its photos are kept: set this to true to bring it back.
+const SHOW_BEFORE_AFTER = false;
 ---
 
 <section id="realizacje" class="band bg-paper-dim">
   <div class="wrap">
     <SectionHeading kicker={t.gallery.kicker} title={t.gallery.title} />
     <ProjectGallery locale={locale} />
-    <div class="mt-16">
-      <BeforeAfter locale={locale} />
-    </div>
+    {
+      SHOW_BEFORE_AFTER && (
+        <div class="mt-16">
+          <BeforeAfter locale={locale} />
+        </div>
+      )
+    }
   </div>
 </section>
