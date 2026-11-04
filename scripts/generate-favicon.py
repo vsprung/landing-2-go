@@ -1,36 +1,49 @@
-# Usage: python3 scripts/generate-favicon.py public
-# Rasterises the ALU3 favicon (rectangles on a 32-unit grid) to PNG/ICO without deps.
-import struct, zlib, sys
-out = sys.argv[1]
-G = (0x1c,0x20,0x24); P = (0xee,0xf0,0xf1); A = (0x8f,0xa3,0xe0)
-# (x, y, w, h, colour) in 32-unit grid; later rects paint over earlier ones.
-RECTS = [(0,0,32,32,G),
-         (6,6,20,3,A),                       # top rail, accent
-         (7,9,4,17,P),(14,9,4,17,P),(21,9,4,17,P),  # three pickets
-         (6,22,20,2,P)]                      # bottom rail
-def colour(x,y):
-    c=None
-    for rx,ry,rw,rh,col in RECTS:
-        if rx<=x<rx+rw and ry<=y<ry+rh: c=col
-    return c
-def render(n, ss=4):
-    rows=[]
-    for py in range(n):
-        row=b'\x00'
-        for px in range(n):
-            acc=[0,0,0]
-            for sy in range(ss):
-                for sx in range(ss):
-                    c=colour((px+(sx+.5)/ss)*32/n,(py+(sy+.5)/ss)*32/n)
-                    for i in range(3): acc[i]+=c[i]
-            row+=bytes(round(v/ss/ss) for v in acc)+b'\xff'
-        rows.append(row)
-    raw=b''.join(rows)
-    def chunk(t,d): return struct.pack('>I',len(d))+t+d+struct.pack('>I',zlib.crc32(t+d)&0xffffffff)
-    return b'\x89PNG\r\n\x1a\n'+chunk(b'IHDR',struct.pack('>IIBBBBB',n,n,8,6,0,0,0))+chunk(b'IDAT',zlib.compress(raw,9))+chunk(b'IEND',b'')
-open(f'{out}/apple-touch-icon.png','wb').write(render(180))
-sizes=[16,32,48]; pngs=[render(s) for s in sizes]
-hdr=struct.pack('<HHH',0,1,len(sizes)); off=6+16*len(sizes); ents=b''
-for s,p in zip(sizes,pngs):
-    ents+=struct.pack('<BBBBHHII',s,s,0,0,1,32,len(p),off); off+=len(p)
-open(f'{out}/favicon.ico','wb').write(hdr+ents+b''.join(pngs))
+"""Build the favicon set from the ALU3 mark.
+
+Usage (needs Pillow: `pip install pillow`):
+    python3 scripts/generate-favicon.py docs/design/brand/alu3-mark-source.jpg public
+
+The source is a square JPEG of a metal hexagon on a black background. The black
+outside the hexagon becomes transparent, the hexagon is cropped to a square, and
+these files are written to the output directory:
+    favicon.ico           16, 32 and 48 px
+    favicon-192.png       for browsers that pick the largest PNG icon
+    apple-touch-icon.png  180 px on graphite, since iOS does not keep transparency
+"""
+import sys
+from PIL import Image, ImageDraw, ImageFilter
+
+GRAPHITE = (0x1C, 0x20, 0x24, 255)
+THRESHOLD = 40  # luminance that separates the mark from the black background
+
+
+def cut_out(src: Image.Image) -> Image.Image:
+    rgb = src.convert('RGB')
+    lum = rgb.convert('L').point(lambda v: 255 if v > THRESHOLD else 0)
+    # Flood the background from a corner: dark areas enclosed by the frame
+    # (the inner groove, the letters) are not reached and stay opaque.
+    ImageDraw.floodfill(lum, (0, 0), 128)
+    alpha = lum.point(lambda v: 0 if v == 128 else 255).filter(ImageFilter.GaussianBlur(1.2))
+    out = rgb.convert('RGBA')
+    out.putalpha(alpha)
+    left, top, right, bottom = alpha.point(lambda v: 255 if v > 8 else 0).getbbox()
+    side = max(right - left, bottom - top)
+    cx, cy = (left + right) / 2, (top + bottom) / 2
+    box = tuple(round(v) for v in (cx - side / 2, cy - side / 2, cx + side / 2, cy + side / 2))
+    return out.crop(box)
+
+
+def main(source: str, out_dir: str) -> None:
+    mark = cut_out(Image.open(source))
+    mark.resize((256, 256), Image.LANCZOS).save(
+        f'{out_dir}/favicon.ico', sizes=[(16, 16), (32, 32), (48, 48)]
+    )
+    mark.resize((192, 192), Image.LANCZOS).save(f'{out_dir}/favicon-192.png', optimize=True)
+    touch = Image.new('RGBA', (180, 180), GRAPHITE)
+    inner = mark.resize((150, 150), Image.LANCZOS)
+    touch.alpha_composite(inner, (15, 15))
+    touch.convert('RGB').save(f'{out_dir}/apple-touch-icon.png', optimize=True)
+
+
+if __name__ == '__main__':
+    main(sys.argv[1], sys.argv[2])
