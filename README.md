@@ -1,6 +1,6 @@
-# StalBruk Landing Page
+# ALU3 Landing Page
 
-Bilingual (Polish/English) static landing page for StalBruk, a Gdańsk gates-and-paving
+Bilingual (Polish/English) static landing page for ALU3, a Gdańsk gates-and-paving
 contractor. Built with [Astro](https://astro.build) (static output) and
 [Tailwind CSS](https://tailwindcss.com), deployed to Cloudflare Pages.
 
@@ -15,5 +15,5 @@ npm test         # run the Vitest test suite
 
 ## Documentation
 
-- Design spec: [`docs/superpowers/specs/2026-08-13-stalbruk-landing-design.md`](docs/superpowers/specs/2026-08-13-stalbruk-landing-design.md)
-- Implementation plan: [`docs/superpowers/plans/2026-08-13-stalbruk-landing.md`](docs/superpowers/plans/2026-08-13-stalbruk-landing.md)
+- Design spec: [`docs/superpowers/specs/2026-08-13-ALU3-landing-design.md`](docs/superpowers/specs/2026-08-13-ALU3-landing-design.md)
+- Implementation plan: [`docs/superpowers/plans/2026-08-13-ALU3-landing.md`](docs/superpowers/plans/2026-08-13-ALU3-landing.md)

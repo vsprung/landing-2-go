@@ -1,4 +1,4 @@
-# Handoff — StalBruk landing page
+# Handoff — ALU3 landing page
 
 **Date:** 2026-08-14
 **Branch:** `main` is the trunk and the default branch; feature work branches off it.
@@ -35,7 +35,7 @@ Language hint bar removed; the header switch carries a globe icon.
 ## 2026-09-18 — ALU3 change request
 
 The page was rebuilt to `change-requests/alu3_mockup_v13-1.html`. The brand is now
-**ALU3** ("a brand of StalBruk Sp. z o.o."), and the offer is aluminium gates and fences,
+**ALU3** ("a brand of ALU3 Sp. z o.o."), and the offer is aluminium gates and fences,
 glass railings and glass canopies. Block paving and earthworks are gone.
 
 - _Structure:_ header → hero with a stats strip → services (snap row) → full-bleed
@@ -49,7 +49,8 @@ glass railings and glass canopies. Block paving and earthworks are gone.
   the service cards, the sticky mobile bar, the PL/EN locales and the language hint.
 - _Before/after slider:_ `BeforeAfter.astro` ("Podjazd przed i po") was restored under the
   gallery at the client's request, with the original driveway copy and the old stock
-  pair, and it is always rendered. **Before launch:** replace `before-driveway.jpg` and
+  pair. It is currently **hidden** by `SHOW_BEFORE_AFTER = false` in `Gallery.astro`;
+  set the flag to `true` to show it again. **Before launch:** replace `before-driveway.jpg` and
   `after-driveway.jpg` with a genuine pair from one site, shot from the same position.
   The current pair is two unrelated photographs (see `CREDITS.md`).
 - _Service values_ (`src/lib/services.ts`) are now `brama-przesuwna`,
@@ -58,7 +59,7 @@ glass railings and glass canopies. Block paving and earthworks are gone.
 - _Where this departs from the mockup, and why:_ accent text on dark bands uses a light
   tint, because the mockup's value fails contrast; form fields keep visible labels; the
   field underline is lighter so it clears 3:1. See `CLAUDE.md`.
-- _Unconfirmed values:_ the phone `+48 510 318 834`, the email `biuro@alu3.pl`, the
+- _Unconfirmed values:_ the phone `+48 603 722 745`, the email `biuro@alu3.pl`, the
   figures, the prices and the NIP are taken as the mockup shows them. `_meta.demo` stays
   `true`.
 
@@ -245,7 +246,7 @@ Axe cannot catch any of this — contrast over a photograph is not something it 
 
 ## Open item 3 — demo data must be replaced before launch
 
-`src/i18n/{pl,en}.json` carry values that have not been confirmed: the trust figures (12 years, 380 projects, 5-year warranty, 100% in-house production), the phone `+48 510 318 834`, the email `biuro@alu3.pl`, the company name and address, and the three service prices (from 12 000 zł, 6 000 zł and 2 500 zł). All of them come from the ALU3 mockup. The NIP is deliberately impossible (`000-000-00-00`), so it cannot collide with a real company.
+`src/i18n/{pl,en}.json` carry values that have not been confirmed: the trust figures (12 years, 380 projects, 5-year warranty, 100% in-house production), the phone `+48 603 722 745`, the email `biuro@alu3.pl`, the company name and address, and the three service prices (from 12 000 zł, 1 500 zł and 2 500 zł). All of them come from the ALU3 mockup. The NIP is deliberately impossible (`000-000-00-00`), so it cannot collide with a real company.
 
 `_meta.demo: true` marks this, and `tests/i18n.test.ts` fails while it is true. Replace the values, set the flag to `false`, and the suite goes green. Do not clear the flag while the values are still invented.
 

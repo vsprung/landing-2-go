@@ -1,4 +1,4 @@
-# Design Specification — StalBruk Landing Page
+# Design Specification — ALU3 Landing Page
 
 **Date:** 2026-08-13
 **Status:** approved by the client, ready for implementation planning
@@ -319,7 +319,7 @@ Required from the client before launch:
 | — | Photographs of completed work (shot list in `docs/design/placeholders/README.md`) |
 | — | Genuine testimonials with consent to publish |
 
-Separately, the **brand risk** from `info/SPEC.md` §10: the name "StalBruk" overlaps with existing paving contractors, and `stalbruk.pl` is presumed taken. Until a domain is bought the site lives on `*.pages.dev`. A WHOIS and trademark-register check is required before public launch.
+Separately, the **brand risk** from `info/SPEC.md` §10: the name "ALU3" overlaps with existing paving contractors, and `alu3.pl` is presumed taken. Until a domain is bought the site lives on `*.pages.dev`. A WHOIS and trademark-register check is required before public launch.
 
 Polish copy needs a native-speaker review before launch. The text is grammatically sound, but sales microcopy deserves a live ear.
 

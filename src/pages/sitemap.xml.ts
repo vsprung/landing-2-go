@@ -4,7 +4,7 @@ import { routes } from '../i18n';
 const INDEXABLE = ['home', 'privacy'] as const;
 
 export const GET: APIRoute = ({ site }) => {
-  const origin = site?.origin ?? 'https://stalbruk.pages.dev';
+  const origin = site?.origin ?? 'https://alu3.pages.dev';
   const urls = INDEXABLE.flatMap((key) =>
     (['pl', 'en'] as const).map((locale) => {
       const loc = new URL(routes[key][locale], origin).toString();

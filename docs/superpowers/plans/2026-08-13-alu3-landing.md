@@ -1,4 +1,4 @@
-# StalBruk Landing Page Implementation Plan
+# ALU3 Landing Page Implementation Plan
 
 > **For agentic workers:** REQUIRED SUB-SKILL: Use superpowers:subagent-driven-development (recommended) or superpowers:executing-plans to implement this plan task-by-task. Steps use checkbox (`- [ ]`) syntax for tracking.
 
@@ -8,7 +8,7 @@
 
 **Tech Stack:** Astro 7 (static output), TypeScript (strict), Tailwind CSS 4, Vitest, Cloudflare Pages + Pages Functions, Web3Forms, Telegram Bot API.
 
-**Source documents:** [`docs/superpowers/specs/2026-08-13-stalbruk-landing-design.md`](../specs/2026-08-13-stalbruk-landing-design.md) (design spec) and [`info/SPEC.md`](../../../info/SPEC.md) (original product spec).
+**Source documents:** [`docs/superpowers/specs/2026-08-13-ALU3-landing-design.md`](../specs/2026-08-13-ALU3-landing-design.md) (design spec) and [`info/SPEC.md`](../../../info/SPEC.md) (original product spec).
 
 ---
 
@@ -115,7 +115,7 @@ import tailwindcss from '@tailwindcss/vite';
 
 export default defineConfig({
   // Replace with the production domain once it is bought (see spec §10).
-  site: 'https://stalbruk.pages.dev',
+  site: 'https://alu3.pages.dev',
   output: 'static',
   i18n: {
     defaultLocale: 'pl',
@@ -223,7 +223,7 @@ git commit -m "chore: scaffold Astro project with Tailwind, ESLint, Prettier and
 - [ ] **Step 1: Write `wrangler.toml`**
 
 ```toml
-name = "stalbruk"
+name = "alu3"
 pages_build_output_dir = "dist"
 compatibility_date = "2026-08-01"
 ```
@@ -386,7 +386,7 @@ export function route(key: RouteKey, locale: Locale): string {
 }
 
 export function absoluteUrl(path: string, site: URL | undefined): string {
-  const origin = site?.origin ?? 'https://stalbruk.pages.dev';
+  const origin = site?.origin ?? 'https://alu3.pages.dev';
   return new URL(path, origin).toString();
 }
 ```
@@ -984,7 +984,7 @@ async function sendEmail(lead: LeadInput, env: Env): Promise<void> {
     body: JSON.stringify({
       access_key: env.WEB3FORMS_ACCESS_KEY,
       subject: `Nowe zgłoszenie: ${lead.service}`,
-      from_name: 'StalBruk — formularz',
+      from_name: 'ALU3 — formularz',
       Usługa: lead.service,
       Telefon: lead.phone,
       Imię: lead.name ?? '—',
@@ -2597,7 +2597,7 @@ Allow: /
 Disallow: /dziekujemy
 Disallow: /en/thank-you
 
-Sitemap: https://stalbruk.pages.dev/sitemap.xml
+Sitemap: https://alu3.pages.dev/sitemap.xml
 ```
 
 - [ ] **Step 2: Write `src/pages/sitemap.xml.ts`**
@@ -2609,7 +2609,7 @@ import { routes } from '../i18n';
 const INDEXABLE = ['home', 'privacy'] as const;
 
 export const GET: APIRoute = ({ site }) => {
-  const origin = site?.origin ?? 'https://stalbruk.pages.dev';
+  const origin = site?.origin ?? 'https://alu3.pages.dev';
   const urls = INDEXABLE.flatMap((key) =>
     (['pl', 'en'] as const).map((locale) => {
       const loc = new URL(routes[key][locale], origin).toString();
@@ -2803,7 +2803,7 @@ Swap the SVGs in `public/images/placeholders/` for real photographs per `docs/de
 
 - [ ] **Step 6: Resolve the domain**
 
-Run a WHOIS check on `stalbruk.pl` and a search of the Polish trademark register. If the name is taken, rebrand before the public launch rather than after. Attach the chosen domain to the Pages project and confirm the certificate is issued.
+Run a WHOIS check on `alu3.pl` and a search of the Polish trademark register. If the name is taken, rebrand before the public launch rather than after. Attach the chosen domain to the Pages project and confirm the certificate is issued.
 
 - [ ] **Step 7: Run the full suite**
 

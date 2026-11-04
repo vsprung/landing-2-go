@@ -16,7 +16,7 @@ const KEYS = [
   'gclid',
 ] as const;
 
-const STORE = 'stalbruk:attribution';
+const STORE = 'alu3:attribution';
 
 function readStored(): Record<string, string> {
   try {

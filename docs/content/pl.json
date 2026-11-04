@@ -6,15 +6,15 @@
   },
 
   "seo": {
-    "title": "Bramy aluminiowe i brukarstwo — Gdańsk i Pomorze | StalBruk",
+    "title": "Bramy aluminiowe i brukarstwo — Gdańsk i Pomorze | ALU3",
     "description": "Produkcja i montaż bram aluminiowych spawanych laserowo, ogrodzeń i automatyki. Układanie kostki brukowej, roboty ziemne, realizacje pod klucz. Bezpłatny pomiar i wycena w 24 godziny.",
-    "ogTitle": "StalBruk — bramy aluminiowe i kostka brukowa na Pomorzu",
+    "ogTitle": "ALU3 — bramy aluminiowe i kostka brukowa na Pomorzu",
     "ogDescription": "Jedna ekipa, jeden termin: bramy spawane laserowo, brukarstwo i roboty ziemne własnym sprzętem. Gdańsk, Gdynia, Sopot i okolice.",
     "ogImageAlt": "Aluminiowa brama przesuwna i podjazd z kostki brukowej przed domem jednorodzinnym"
   },
 
   "topbar": {
-    "brand": "StalBruk",
+    "brand": "ALU3",
     "location": "Gdańsk i okolice",
     "phoneLabel": "Zadzwoń",
     "phoneAria": "Zadzwoń pod numer {{TELEFON}}",
@@ -340,7 +340,7 @@
   },
 
   "thankyou": {
-    "seoTitle": "Dziękujemy za zgłoszenie | StalBruk",
+    "seoTitle": "Dziękujemy za zgłoszenie | ALU3",
     "title": "Zgłoszenie przyjęte",
     "lead": "Oddzwonimy w ciągu 24 godzin, a jeśli wysłałeś je wieczorem — następnego dnia rano.",
     "next": "W międzyczasie możesz obejrzeć nasze realizacje albo zadzwonić od razu pod {{TELEFON}}.",
