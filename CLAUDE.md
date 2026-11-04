@@ -1,6 +1,6 @@
 # landing-2-go — ALU3 landing page
 
-Lead-generation landing page for ALU3 (a brand of ALU3), an aluminium gates, railings and glass canopies contractor in Gdańsk, Poland.
+Lead-generation landing page for ALU3, an aluminium gates, railings and glass canopies contractor in Gdańsk, Poland.
 
 ## Documents
 
